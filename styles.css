@@ -1,0 +1,67 @@
+body {
+  background-image: url('./3138314.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.mainSection {
+  background-color: rgba(5, 4, 2, 0.25);
+  width: 850px;
+  height: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+}
+
+.title {
+  text-align: center;
+  margin: 20px;
+  font-weight: 800;
+  font-size: 3em;
+}
+
+.pizza {
+  text-align: center;
+  font-weight: 800;
+  font-size: 2em;
+  font-family: 'Niconne', cursive;
+  /* font-family: 'Fredoka One', cursive; */
+  margin: 10px;
+}
+
+.steps-statements {
+  margin-bottom: 10px;
+  font-weight: 600;
+  display: block;
+  font-size: 1.1em;
+}
+
+.form-components {
+  margin: 16px;
+  margin-bottom: 20px;
+}
+
+.row {
+  height: 24px;
+}
+
+.radio-input {
+  height: 24px;
+}
+
+.topping-headings {
+  padding-bottom: 20px;
+  font-size: 20;
+}
+
+.buttons-section {
+  padding: 10px;
+}
+
+.result-tab {
+  font-weight: bold;
+  font-size: 1.2em;
+}

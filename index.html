@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Pizza Parlour</title>
+    <link rel="shortcut icon" type="image/png" href="./favicon.ico" />
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Niconne&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="mainSection">
+        <h1 class="title">The <span class="pizza">Pizza</span> Parlour</h1>
+        <form name="orderForm" onsubmit="return validateForm()">
+            <div class="form-components">
+                <p class="steps-statements"> Step 1: Enter your name, address, and phone number.</p>
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" class="customer-details form-control" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address: </label>
+                    <input type="text" id="address" class="customer-details form-control" placeholder="1234 Main Str">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="city">City: </label>
+                        <input type="text" id="city" class="customer-details form-control">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="state">State: </label>
+                        <input type="text" id="state" class="customer-details form-control">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="zip">Zip: </label>
+                        <input type="text" id="zip" class="customer-details form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone: </label>
+                    <input type="text" id="phone" class="customer-details form-control">
+                </div>
+            </div>
+
+            <div class="form-components">
+                <p class="steps-statements"> Step 2: Select Pizza size:</p>
+                <div class="form-check">
+                    <div class="row" class="pizza-input">
+                        <div class="col-md-6 radio-input">
+                            <input type="radio" id="small" class="pizza-size form-check-input" name="size"
+                                value="small">
+                            <label for="small" class="form-check-label">Small</label>
+                        </div>
+                        <p class="col-md-6">Rs. 100</p>
+                    </div>
+                    <div class="row" class="pizza-input">
+                        <div class="col-md-6 radio-input">
+                            <input type="radio" id="medium" class="pizza-size form-check-input" name="size"
+                                value="medium">
+                            <label for="female" class="form-check-label">Medium</label>
+                        </div>
+                        <p class="col-md-6">Rs. 200</p>
+                    </div>
+                    <div class=row>
+                        <div class="col-md-6 radio-input">
+                            <input type="radio" id="large" class="pizza-size form-check-input" name="size"
+                                value="large">
+                            <label for="large" class="form-check-label">Large</label>
+                        </div>
+                        <p class="col-md-6">Rs. 400</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="form-components">
+                <p class="steps-statements">Step 3: Select at least 1 Pizza Topping: </p>
+                <div class="form-check">
+                    <div class="row toppings-headings">
+                        <p class="col-md-3">Toppings</p>
+                        <p class="col-md-3">Small</p>
+                        <p class="col-md-3">Medium</p>
+                        <p class="col-md-3">Large</p>
+
+                    </div>
+                    <div style="height:8px;"><br></div>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <input type="checkbox" id="topping1" class="pizza-topping form-check-input" name="topping1"
+                                value="pepperoni">
+                            <label for="topping1" class="form-check-label">Pepperoni</label>
+                        </div>
+                        <p class="col-md-3 price-small">Rs. 30</p>
+                        <p class="col-md-3 price-medium">Rs. 40</p>
+                        <p class="col-md-3 price-large">Rs. 50</p>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <input type="checkbox" id="topping2" class="pizza-topping form-check-input" name="topping2"
+                                value="bacon">
+                            <label for="topping2" class="form-check-label">Canadian Bacon</label>
+                        </div>
+                        <p class="col-md-3 price-small">Rs. 30</p>
+                        <p class="col-md-3 price-medium">Rs. 40</p>
+                        <p class="col-md-3 price-large">Rs. 50</p>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <input type="checkbox" id="topping3" class="pizza-topping form-check-input" name="topping3"
+                                value="sausage">
+                            <label for="topping3" class="form-check-label">Sausage</label>
+                        </div>
+                        <p class="col-md-3 price-small">Rs. 30</p>
+                        <p class="col-md-3 price-medium">Rs. 40</p>
+                        <p class="col-md-3 price-large">Rs. 50</p>
+
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <input type="checkbox" id="topping4" class="pizza-topping form-check-input" name="topping4"
+                                value="mushrooms">
+                            <label for="topping4" class="form-check-label">Mushrooms</label>
+                        </div>
+                        <p class="col-md-3 price-small">Rs. 30</p>
+                        <p class="col-md-3 price-medium">Rs. 40</p>
+                        <p class="col-md-3 price-large">Rs. 50</p>
+
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <input type="checkbox" id="topping5" class="pizza-topping form-check-input" name="topping5"
+                                value="pineapple">
+                            <label for="topping5" class="form-check-label">Pineapple</label>
+                        </div>
+                        <p class="col-md-3 price-small">Rs. 30</p>
+                        <p class="col-md-3 price-medium">Rs. 40</p>
+                        <p class="col-md-3 price-large">Rs. 50</p>
+
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <input type="checkbox" id="topping6" class="pizza-topping form-check-input" name="topping6"
+                                value="olives">
+                            <label for="topping6" class="form-check-label">Black Olives</label>
+                        </div>
+                        <p class="col-md-3 price-small">Rs. 30</p>
+                        <p class="col-md-3 price-medium">Rs. 40</p>
+                        <p class="col-md-3 price-large">Rs. 50</p>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="form-components">
+                <p class="steps-statements">Step 4: Select the quantity you want:</p>
+                <div class="form-group">
+                    <select id="selectQuantity" class="form-control" onchange="changeQuantity()">
+                        <option value="" selected disabled hidden>Choose...</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-components">
+                <p id="result" class="result-tab"></p>
+            </div>
+
+            <div class="form-components buttons-section">
+                <button type="submit" class="btn btn-dark">Submit Order</button>
+                <button type="reset" onclick="clearResult()" class="btn btn-light">Clear entries</button>
+            </div>
+
+        </form>
+
+    </div>
+
+    <script src="./index.js" type="text/javascript"></script>
+</body>
+
+</html>
